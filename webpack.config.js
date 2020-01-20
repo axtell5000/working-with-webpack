@@ -6,5 +6,14 @@ module.exports = {
 	output: {
 		filename: 'main.js',
 		path: path.resolve(__dirname, 'dist')
+	},
+	module: {
+		rules: [
+			{
+				test: /\.css$/,
+				// does in reverse order, css-loader converts css to javascript, stlye-loader injects it into style tags
+				use: ['style-loader', 'css-loader'] 
+			}
+		]
 	}
 }
