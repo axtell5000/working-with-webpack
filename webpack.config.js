@@ -10,9 +10,9 @@ module.exports = {
 	module: {
 		rules: [
 			{
-				test: /\.css$/,
-				// does in reverse order, css-loader converts css to javascript, stlye-loader injects it into style tags
-				use: ['style-loader', 'css-loader'] 
+				test: /\.scss$/,
+				// does in reverse order, css-loader converts css to javascript, stlye-loader injects it into style tags into DOM
+				use: ['style-loader', 'css-loader', 'sass-loader'] 
 			}
 		]
 	}
